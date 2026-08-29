@@ -165,9 +165,11 @@ export default function TrainersPage() {
           <h3 className="text-2xl font-black uppercase tracking-wide">
             Want Personal Guidance?
           </h3>
+         <Link href='/contact'>
           <button className="bg-black text-white hover:bg-zinc-800 font-extrabold text-xs px-8 py-3.5 rounded-lg uppercase tracking-wider transition">
             Get Started
           </button>
+          </Link>
         </div>
       </section>
 

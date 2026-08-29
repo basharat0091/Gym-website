@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 export default function AboutPage() {
   return (
     <div className="bg-white text-zinc-900 min-h-screen">
@@ -154,9 +154,11 @@ export default function AboutPage() {
           <h3 className="text-xl md:text-2xl font-black uppercase tracking-wide">
             Become a part of Basharat Fitness today!
           </h3>
+          <Link href='/contact'>
           <button className="bg-black text-white hover:bg-zinc-800 font-extrabold text-xs px-6 py-3 rounded uppercase tracking-wider transition">
             Join Now
           </button>
+          </Link>
         </div>
       </section>
 

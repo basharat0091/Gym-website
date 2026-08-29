@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function MembershipSection() {
   return (
     <section className="bg-black text-white py-12 px-6">
@@ -31,8 +33,11 @@ export default function MembershipSection() {
             </div>
 
             <button className="w-full bg-yellow-500 text-black font-extrabold text-sm py-3 rounded-lg uppercase hover:bg-yellow-400 transition">
+            <Link href='/contact'>
               JOIN NOW
+              </Link>
             </button>
+            
           </div>
 
           {/* CARD 2: POPULAR */}
@@ -54,10 +59,11 @@ export default function MembershipSection() {
                 <li className="flex items-center gap-2">✓ Diet Plan</li>
               </ul>
             </div>
-
+<Link href='/contact'>
             <button className="w-full bg-yellow-500 text-black font-extrabold text-sm py-3 rounded-lg uppercase hover:bg-yellow-400 transition">
               JOIN NOW
             </button>
+            </Link>
           </div>
 
           {/* CARD 3: PREMIUM */}
@@ -80,10 +86,11 @@ export default function MembershipSection() {
                 <li className="flex items-center gap-2">✓ Diet Plan</li>
               </ul>
             </div>
-
+<Link href='/contact'>
             <button className="w-full bg-yellow-500 text-black font-extrabold text-sm py-3 rounded-lg uppercase hover:bg-yellow-400 transition">
               JOIN NOW
             </button>
+            </Link>
           </div>
 
         </div>

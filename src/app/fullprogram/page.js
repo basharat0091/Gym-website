@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 export default function ProgramsPage() {
   // Programs data array taake code bilkul simple aur saaf rahe
   const programs = [
@@ -106,9 +106,11 @@ export default function ProgramsPage() {
           <h3 className="text-2xl font-black uppercase tracking-wide">
             Ready To Start?
           </h3>
+        <Link href="/contact" >
           <button className="bg-black text-white hover:bg-zinc-800 font-extrabold text-xs px-8 py-3.5 rounded-lg uppercase tracking-wider transition">
             Join Now
           </button>
+          </Link>
         </div>
       </section>
 

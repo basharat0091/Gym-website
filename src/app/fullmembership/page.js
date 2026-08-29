@@ -89,7 +89,7 @@ export default function MembershipSection() {
                 </ul>
               </div>
 
-              <Link href={`/checkout/${plan.id}`} className="w-full">
+              <Link href="/contact">
                 <button className="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-extrabold text-xs py-3 rounded-lg uppercase tracking-wider transition">
                   Join Now
                 </button>
@@ -129,7 +129,7 @@ export default function MembershipSection() {
           <h3 className="text-2xl md:text-3xl font-black uppercase tracking-wide">
             Start Your Journey Today!
           </h3>
-          <Link href="/membership">
+          <Link href="/contact">
             <button className="bg-black text-white hover:bg-zinc-800 font-extrabold text-xs px-8 py-3.5 rounded-lg uppercase tracking-wider transition">
               Join Now
             </button>
