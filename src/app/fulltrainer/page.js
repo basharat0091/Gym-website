@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 
 export default function TrainersPage() {
-  // Detailed Trainers Data Array (Added 'id' property)
   const trainers = [
     {
       id: "1",
@@ -81,79 +80,108 @@ export default function TrainersPage() {
   return (
     <div className="bg-zinc-950 text-white min-h-screen">
       
-      {/* 1. Interactive Hero Banner with Background Image */}
+      {/* 1. Hero Banner */}
       <section className="relative py-28 px-6 text-center border-b border-zinc-800 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600&auto=format&fit=crop')" }}>
-        {/* Dark Overlay for Text Contrast */}
         <div className="absolute inset-0 bg-black/80"></div>
-
         <div className="relative z-10 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-black uppercase tracking-wider mb-4 drop-shadow-md">
             Meet Our <span className="text-yellow-500">Coaches</span>
           </h1>
           <p className="text-zinc-300 text-sm md:text-base max-w-xl mx-auto drop-shadow">
-            Hover over any trainer card to reveal their detailed profile, specialties, and background experience.
+            Explore our expert trainers and book a session to achieve your fitness goals.
           </p>
         </div>
       </section>
 
-      {/* 2. Interactive Hover Profile Grid */}
+      {/* 2. Responsive Trainers Grid */}
       <section className="max-w-6xl mx-auto py-16 px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {trainers.map((item) => (
             <div 
               key={item.id} 
-              className="relative group h-96 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl cursor-pointer"
+              className="rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl flex flex-col group"
             >
-              {/* Background Trainer Image */}
-              <img 
-                src={item.image} 
-                alt={item.name} 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
+              {/* Trainer Image Container */}
+              <div className="relative h-72 md:h-96 overflow-hidden">
+                <img 
+                  src={item.image} 
+                  alt={item.name} 
+                  className="w-full h-full object-cover md:group-hover:scale-110 transition-transform duration-500"
+                />
 
-              {/* Default Name Tag (Visible when not hovering) */}
-              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-5 text-center group-hover:opacity-0 transition-opacity duration-300">
-                <h3 className="text-xl font-black uppercase text-white mb-1">
-                  {item.name}
-                </h3>
-                <p className="text-yellow-500 font-bold text-xs uppercase">
-                  {item.role}
-                </p>
-              </div>
-
-              {/* Hover Overlay Profile Details */}
-              <div className="absolute inset-0 bg-black/90 p-6 flex flex-col justify-between text-left opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                
-                <div>
-                  <span className="bg-yellow-500 text-black text-[10px] font-black px-2 py-1 rounded uppercase tracking-wide">
+                {/* Experience Badge (Mobile & Desktop) */}
+                <div className="absolute top-3 left-3 md:hidden">
+                  <span className="bg-yellow-500 text-black text-[10px] font-black px-2.5 py-1 rounded uppercase tracking-wide shadow">
                     {item.experience}
                   </span>
-                  
-                  <h3 className="text-2xl font-black uppercase text-white mt-3 mb-1">
+                </div>
+
+                {/* Desktop Default Name Tag (Hidden on Mobile) */}
+                <div className="hidden md:block absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-5 text-center md:group-hover:opacity-0 transition-opacity duration-300">
+                  <h3 className="text-xl font-black uppercase text-white mb-1">
                     {item.name}
                   </h3>
-                  
-                  <p className="text-yellow-500 text-xs font-bold uppercase mb-4">
+                  <p className="text-yellow-500 font-bold text-xs uppercase">
+                    {item.role}
+                  </p>
+                </div>
+
+                {/* Desktop Hover Overlay (Hidden on Mobile, Appears on Hover on Desktop) */}
+                <div className="hidden md:flex absolute inset-0 bg-black/90 p-6 flex-col justify-between text-left opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                  <div>
+                    <span className="bg-yellow-500 text-black text-[10px] font-black px-2 py-1 rounded uppercase tracking-wide">
+                      {item.experience}
+                    </span>
+                    <h3 className="text-2xl font-black uppercase text-white mt-3 mb-1">
+                      {item.name}
+                    </h3>
+                    <p className="text-yellow-500 text-xs font-bold uppercase mb-4">
+                      {item.role}
+                    </p>
+
+                    <div className="border-t border-zinc-800 pt-3">
+                      <p className="text-zinc-400 text-xs font-bold uppercase tracking-wider mb-1">Specialty</p>
+                      <p className="text-zinc-200 text-xs font-semibold mb-3">{item.specialty}</p>
+
+                      <p className="text-zinc-400 text-xs font-bold uppercase tracking-wider mb-1">About</p>
+                      <p className="text-zinc-300 text-xs leading-relaxed">{item.bio}</p>
+                    </div>
+                  </div>
+
+                  <Link href={`/bookingnow/${item.id}`} className="w-full block">
+                    <button className="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-extrabold text-xs py-2.5 rounded uppercase tracking-wider transition">
+                      Book Session
+                    </button>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Mobile Content & Details Section (Always Visible on Mobile, Hidden on Desktop) */}
+              <div className="p-5 flex flex-col flex-grow justify-between md:hidden bg-zinc-900">
+                <div>
+                  <h3 className="text-xl font-black uppercase text-white mb-1">
+                    {item.name}
+                  </h3>
+                  <p className="text-yellow-500 font-bold text-xs uppercase mb-3">
                     {item.role}
                   </p>
 
-                  <div className="border-t border-zinc-800 pt-3">
-                    <p className="text-zinc-400 text-xs font-bold uppercase tracking-wider mb-1">Specialty</p>
-                    <p className="text-zinc-200 text-xs font-semibold mb-3">{item.specialty}</p>
+                  <div className="border-t border-zinc-800 pt-3 mb-4">
+                    <p className="text-zinc-400 text-[11px] font-bold uppercase tracking-wider mb-0.5">Specialty</p>
+                    <p className="text-zinc-200 text-xs font-semibold mb-2">{item.specialty}</p>
 
-                    <p className="text-zinc-400 text-xs font-bold uppercase tracking-wider mb-1">About</p>
+                    <p className="text-zinc-400 text-[11px] font-bold uppercase tracking-wider mb-0.5">About</p>
                     <p className="text-zinc-300 text-xs leading-relaxed">{item.bio}</p>
                   </div>
                 </div>
 
-                {/* Card Action Button with Dynamic Route Link */}
                 <Link href={`/bookingnow/${item.id}`} className="w-full block">
-                  <button className="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-extrabold text-xs py-2.5 rounded uppercase tracking-wider transition">
+                  <button className="w-full bg-yellow-500 active:scale-95 text-black font-extrabold text-xs py-3 rounded-lg uppercase tracking-wider transition text-center shadow">
                     Book Session
                   </button>
                 </Link>
-
               </div>
+
             </div>
           ))}
         </div>
@@ -165,10 +193,10 @@ export default function TrainersPage() {
           <h3 className="text-2xl font-black uppercase tracking-wide">
             Want Personal Guidance?
           </h3>
-         <Link href='/contact'>
-          <button className="bg-black text-white hover:bg-zinc-800 font-extrabold text-xs px-8 py-3.5 rounded-lg uppercase tracking-wider transition">
-            Get Started
-          </button>
+          <Link href='/contact'>
+            <button className="bg-black text-white hover:bg-zinc-800 font-extrabold text-xs px-8 py-3.5 rounded-lg uppercase tracking-wider transition">
+              Get Started
+            </button>
           </Link>
         </div>
       </section>
