@@ -25,7 +25,7 @@ export default function TrainersSection() {
           </div>
 
           {/* Trainer 2 */}
-          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-center  ">
+          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-center hover:border-yellow-500 transition duration-300  ">
             <img 
               src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=500&auto=format&fit=crop" 
               alt="Ali Raza" 
@@ -36,7 +36,7 @@ export default function TrainersSection() {
           </div>
 
           {/* Trainer 3 */}
-          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-center ">
+          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-center hover:border-yellow-500 transition duration-300">
             <img 
               src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400" 
               alt="Sara Khan" 
@@ -47,7 +47,7 @@ export default function TrainersSection() {
           </div>
 
           {/* Trainer 4 */}
-          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-center ">
+          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-center hover:border-yellow-500 transition duration-300 ">
             <img 
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400" 
               alt="Usman Ali" 

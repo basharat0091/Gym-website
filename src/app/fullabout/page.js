@@ -101,7 +101,7 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           
-          <div className="relative h-48 rounded-xl overflow-hidden group border border-zinc-200 shadow">
+          <div className="relative h-48 rounded-xl overflow-hidden group border border-zinc-200 shadow ">
             <img 
               src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=500&auto=format&fit=crop" 
               alt="Equipment" 

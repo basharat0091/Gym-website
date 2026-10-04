@@ -71,14 +71,14 @@ export default function ProgramsPage() {
 
       {/* 2. Programs Grid (8 Cards) */}
       <section className="max-w-6xl mx-auto py-16 px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
           {programs.map((item, index) => (
             <div 
               key={index} 
               className="bg-black text-white rounded-2xl overflow-hidden border border-zinc-800 flex flex-col justify-between hover:scale-105 transition duration-300 shadow-xl"
             >
               {/* Card Image */}
-              <div className="h-48 overflow-hidden">
+              <div className="h-48 overflow-hidden ">
                 <img 
                   src={item.image} 
                   alt={item.title} 

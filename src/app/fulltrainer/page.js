@@ -99,7 +99,7 @@ export default function TrainersPage() {
           {trainers.map((item) => (
             <div 
               key={item.id} 
-              className="rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl flex flex-col group"
+              className="rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl flex flex-col group hover:border-yellow-500 transition duration-300"
             >
               {/* Trainer Image Container */}
               <div className="relative h-72 md:h-96 overflow-hidden">

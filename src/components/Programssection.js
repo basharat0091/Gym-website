@@ -20,7 +20,7 @@ export default function Programssection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           
           {/* Card 1 */}
-          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-center">
+          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-center hover:border-yellow-500 transition duration-300">
             <img 
               src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=400" 
               alt="Body Building" 
@@ -31,7 +31,7 @@ export default function Programssection() {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-center">
+          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-center hover:border-yellow-500 transition duration-300">
             <img 
               src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=400" 
               alt="Weight Loss" 
@@ -42,7 +42,7 @@ export default function Programssection() {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-center">
+          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-center hover:border-yellow-500 transition duration-300">
             <img 
               src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=400" 
               alt="Yoga" 
@@ -53,7 +53,7 @@ export default function Programssection() {
           </div>
 
           {/* Card 4 */}
-          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-center">
+          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-center hover:border-yellow-500 transition duration-300">
             <img 
               src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=400" 
               alt="Crossfit" 
@@ -64,7 +64,7 @@ export default function Programssection() {
           </div>
 
           {/* Card 5 */}
-          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-center">
+          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-center hover:border-yellow-500 transition duration-300">
             <img 
               src="https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?q=80&w=400" 
               alt="Functional Training" 

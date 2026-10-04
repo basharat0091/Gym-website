@@ -7,7 +7,7 @@ export default function Aboutsection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           
           {/* Left Side: Image */}
-          <div>
+          <div >
             <img
               src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=600"
               alt="Gym Interior"
